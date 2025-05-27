@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 import RPi.GPIO as GPIO
-
+from flask_cors import CORS
 # GPIO setup
 GPIO.setmode(GPIO.BCM)
-
+CORS(app)
 # Motor pins
 IN1, IN2, IN3, IN4 = 2, 3, 4, 17
 MOTOR_PINS = [IN1, IN2, IN3, IN4]
